@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>One Question 💖</title>
+<style>
+body{
+  background:#fff0f3;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:Arial;
+}
+.card{text-align:center;}
+button{
+  padding:15px 30px;
+  margin:10px;
+  font-size:20px;
+  border-radius:10px;
+  border:none;
+}
+#yes{background:#ff4d6d;color:white;}
+#no{background:#adb5bd;color:white;}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Will you be my Valentine? 💕</h1>
+  <button id="yes">Yes 😍</button>
+  <button id="no" onclick="changeNo()">No 😐</button>
+</div>
+
+<script>
+let count=0;
+const noTexts=[
+ "No 😐","Are you sure? 🤔","Really? 😶","Think again 🥺",
+ "Last chance 😭","Okay fine... YES 😍"
+];
+
+function changeNo(){
+  count++;
+  if(count<noTexts.length){
+    document.getElementById("no").innerText=noTexts[count];
+  }
+  if(count===noTexts.length-1){
+    document.getElementById("no").id="yes";
+  }
+}
+</script>
+
+</body>
+</html>
